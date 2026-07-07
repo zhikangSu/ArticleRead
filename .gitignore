@@ -1,0 +1,6 @@
+.DS_Store
+*.dmg
+*.zip
+release/
+dist/
+node_modules/
