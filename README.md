@@ -1,5 +1,7 @@
 # ArticleRead
 
+![ArticleRead promotional hero](assets/articleread-promo-hero.png)
+
 ArticleRead 是一个面向论文精读的 macOS 桌面应用。它把本地论文阅读、划词提问、批注、译文 PDF 生成和 Notion 归档放进同一个工作流里，适合需要高频阅读 arXiv / PDF 论文的研究者、工程师和学生。
 
 当前公开预览版面向 Apple Silicon Mac，下载 DMG 后即可安装体验。
