@@ -8,18 +8,29 @@ ArticleRead 是一个面向论文精读的桌面应用。它把本地论文阅�
 
 ## 下载
 
-- 最新版本：macOS 0.1.16；Linux 0.1.13（新版 Linux 安装包需在 Linux 机器单独构建）
+- 最新版本：macOS 0.1.18；Linux 0.1.18
 - **从 0.1.13 起支持应用内内核更新**：兼容当前壳的后续功能更新可在设置页一键完成；涉及桌面壳的版本仍需下载完整安装包
-- macOS：Apple Silicon / arm64，从 [v0.1.16](https://github.com/zhikangSu/ArticleRead/releases/tag/v0.1.16) 下载 `ArticleRead-0.1.16-arm64.dmg`
-- Linux：x64，从 [v0.1.13](https://github.com/zhikangSu/ArticleRead/releases/tag/v0.1.13) 下载 `articleread-linux-desktop_0.1.13_amd64.deb` 或 `ArticleRead-0.1.13.AppImage`
-- SHA256（0.1.16 macOS）：
-  - DMG：`8b17b417ea11e3056f7b8bd6e19dbddb96c9127afb089efc3cf78a8e74746347`
-  - macOS ZIP：`4ea8725b09fe47772a912c4b216f59a8509ff0c110d4b88535aebc55f16d60af`
-- SHA256（0.1.13 Linux）：
-  - AppImage：`2cceed0b90aab5b45fd3130ea52ed484f688cf29eaa662cfb10f3e5971470075`
-  - deb：`acdb8c58d3c2822439190ef791cfd7bad21d40f014380b096610f351c62ca006`
+- macOS：Apple Silicon / arm64，从 [v0.1.18](https://github.com/zhikangSu/ArticleRead/releases/tag/v0.1.18) 下载 `ArticleRead-0.1.18-arm64.dmg`
+- Linux：x64，从 [v0.1.18](https://github.com/zhikangSu/ArticleRead/releases/tag/v0.1.18) 下载 `articleread-linux-desktop_0.1.18_amd64.deb`、`ArticleRead-0.1.18.AppImage` 或 `articleread-linux-desktop-0.1.18.tar.gz`
+- SHA256（0.1.18 macOS）：
+  - DMG：`3e6df2d9d6f1749fc4182d3303c9a6543b69da9bc7bb2b5a7f29fc21e420a10c`
+  - macOS ZIP：`6d27afb2c0a555315cda4bd50b0bd0b242b1566ed72ef36eaf3cf408b7b73e7a`
+- SHA256（0.1.18 Linux）：
+  - AppImage：`dc8990ff667c2f0cdd05028c3a8a9e5cc4c97dc4c37a2f548da803de6d9df0b6`
+  - deb：`3640cdae1d8702a3bfbaf3d5183f55bf03d687b86d3c61ff12704b2e02f0a449`
+  - tar.gz：`c852232af11cb820231718c111ee3a2a90a064b6dd216b909a8649016898216f`
 
 > ⚠️ v0.1.10 存在启动即崩的缺陷（`buildAppMenu is not defined`），已下架为 pre-release，请勿使用。
+
+### 0.1.18 亮点
+
+- PDF 页面内支持添加文字与图片笔记，可拖动、缩放、撤销，并能烧录导出到 PDF
+- 修复外部链接、论文资源链接与本地生成文件的打开行为，避免点击后应用白屏
+- 优化划词翻译、长段译文、提问卡片拖动与缩放、面板收起和高亮换色交互
+- Linux 增加原生目录选择器，补齐 Ctrl / Alt 快捷键提示、Shell 环境读取和 TeX 安装提示
+- macOS 与 Linux 完整包均内置 paperq Core 2.22.1；兼容旧壳也可通过应用内更新获得内核功能
+
+> 新下载的 0.1.18 已内置 paperq Core 2.22.1，不会重复下载同一增量包。Linux 壳层、目录选择器和桌面图标等改动需要安装 0.1.18 完整包。
 
 ### 0.1.16 亮点
 
@@ -84,7 +95,7 @@ ArticleRead 是一个面向论文精读的桌面应用。它把本地论文阅�
 
 macOS：
 
-1. 从 Releases 下载 `ArticleRead-0.1.16-arm64.dmg`。
+1. 从 Releases 下载 `ArticleRead-0.1.18-arm64.dmg`。
 2. 打开 DMG，把 `ArticleRead.app` 拖到 `/Applications`。
 3. 第一次打开时，如果 macOS 提示“文件已损坏”或“无法打开”，在终端运行：
 
@@ -97,14 +108,14 @@ sudo xattr -rd com.apple.quarantine "/Applications/ArticleRead.app"
 Linux：
 
 ```bash
-sudo dpkg -i articleread-linux-desktop_0.1.13_amd64.deb
+sudo dpkg -i articleread-linux-desktop_0.1.18_amd64.deb
 ```
 
 也可以直接运行 AppImage：
 
 ```bash
-chmod +x ArticleRead-0.1.13.AppImage
-./ArticleRead-0.1.13.AppImage
+chmod +x ArticleRead-0.1.18.AppImage
+./ArticleRead-0.1.18.AppImage
 ```
 
 ## 使用前准备
