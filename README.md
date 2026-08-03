@@ -36,25 +36,25 @@ AI 问答会调用你本机已经安装并登录的命令行工具。使用前�
 
 ### 2. 下载应用
 
-最新版本为 **0.1.18**，请前往 [v0.1.18 Releases 页面](https://github.com/zhikangSu/ArticleRead/releases/tag/v0.1.18) 下载与你的系统对应的安装包。
+最新版本为 **0.1.19**，请前往 [v0.1.19 Releases 页面](https://github.com/zhikangSu/ArticleRead/releases/tag/v0.1.19) 下载与你的系统对应的安装包。
 
 | 系统 | 架构 | 推荐安装包 |
 | --- | --- | --- |
-| macOS | Apple Silicon / arm64 | `ArticleRead-0.1.18-arm64.dmg` |
-| Linux | x64 / amd64 | `articleread-linux-desktop_0.1.18_amd64.deb` |
+| macOS | Apple Silicon / arm64 | `DeepRead-0.1.19-arm64.dmg` |
+| Linux | x64 / amd64 | `articleread-linux-desktop_0.1.19_amd64.deb` |
 
 ### 3. 安装
 
 #### macOS
 
-1. 打开下载的 `ArticleRead-0.1.18-arm64.dmg`。
-2. 将 `ArticleRead.app` 拖入 `/Applications` 文件夹。
+1. 打开下载的 `DeepRead-0.1.19-arm64.dmg`。
+2. 将 `DeepRead.app` 拖入 `/Applications` 文件夹。
 3. 从“应用程序”中打开 DeepRead。
 
 如果首次打开时 macOS 提示“文件已损坏”或“无法打开”，请在终端中运行：
 
 ```bash
-sudo xattr -rd com.apple.quarantine "/Applications/ArticleRead.app"
+sudo xattr -rd com.apple.quarantine "/Applications/DeepRead.app"
 ```
 
 命令执行完成后，重新打开 DeepRead。
@@ -64,14 +64,14 @@ sudo xattr -rd com.apple.quarantine "/Applications/ArticleRead.app"
 使用 deb 安装包：
 
 ```bash
-sudo dpkg -i articleread-linux-desktop_0.1.18_amd64.deb
+sudo dpkg -i articleread-linux-desktop_0.1.19_amd64.deb
 ```
 
-如果不想安装 deb 包，可以在同一 Releases 页面下载 `ArticleRead-0.1.18.AppImage` 并直接运行：
+如果不想安装 deb 包，可以在同一 Releases 页面下载 `DeepRead-0.1.19.AppImage` 并直接运行：
 
 ```bash
-chmod +x ArticleRead-0.1.18.AppImage
-./ArticleRead-0.1.18.AppImage
+chmod +x DeepRead-0.1.19.AppImage
+./DeepRead-0.1.19.AppImage
 ```
 
 ### 4. 首次启动
