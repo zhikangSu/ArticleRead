@@ -36,18 +36,18 @@ AI 问答会调用你本机已经安装并登录的命令行工具。使用前�
 
 ### 2. 下载应用
 
-最新版本为 **0.1.19**，请前往 [v0.1.19 Releases 页面](https://github.com/zhikangSu/ArticleRead/releases/tag/v0.1.19) 下载与你的系统对应的安装包。
+最新版本为 **0.1.21**，请前往 [v0.1.21 Releases 页面](https://github.com/zhikangSu/DeepRead/releases/tag/v0.1.21) 下载与你的系统对应的安装包。
 
 | 系统 | 架构 | 推荐安装包 |
 | --- | --- | --- |
-| macOS | Apple Silicon / arm64 | `DeepRead-0.1.19-arm64.dmg` |
-| Linux | x64 / amd64 | `articleread-linux-desktop_0.1.19_amd64.deb` |
+| macOS | Apple Silicon / arm64 | `DeepRead-0.1.21-arm64.dmg` |
+| Linux | x64 / amd64 | `articleread-linux-desktop_0.1.21_amd64.deb` |
 
 ### 3. 安装
 
 #### macOS
 
-1. 打开下载的 `DeepRead-0.1.19-arm64.dmg`。
+1. 打开下载的 `DeepRead-0.1.21-arm64.dmg`。
 2. 将 `DeepRead.app` 拖入 `/Applications` 文件夹。
 3. 从“应用程序”中打开 DeepRead。
 
@@ -64,14 +64,14 @@ sudo xattr -rd com.apple.quarantine "/Applications/DeepRead.app"
 使用 deb 安装包：
 
 ```bash
-sudo dpkg -i articleread-linux-desktop_0.1.19_amd64.deb
+sudo dpkg -i articleread-linux-desktop_0.1.21_amd64.deb
 ```
 
-如果不想安装 deb 包，可以在同一 Releases 页面下载 `DeepRead-0.1.19.AppImage` 并直接运行：
+如果不想安装 deb 包，可以在同一 Releases 页面下载 `DeepRead-0.1.21.AppImage` 并直接运行：
 
 ```bash
-chmod +x DeepRead-0.1.19.AppImage
-./DeepRead-0.1.19.AppImage
+chmod +x DeepRead-0.1.21.AppImage
+./DeepRead-0.1.21.AppImage
 ```
 
 ### 4. 首次启动
@@ -85,4 +85,4 @@ chmod +x DeepRead-0.1.19.AppImage
 
 从 0.1.13 起，DeepRead 支持应用内内核更新。兼容当前桌面壳的功能更新可在设置页一键下载，重启应用后生效；更新失败时会自动回退。
 
-如遇到安装、阅读、问答或 Notion 集成问题，欢迎通过 [GitHub Issues](https://github.com/zhikangSu/ArticleRead/issues) 反馈。
+如遇到安装、阅读、问答或 Notion 集成问题，欢迎通过 [GitHub Issues](https://github.com/zhikangSu/DeepRead/issues) 反馈。
