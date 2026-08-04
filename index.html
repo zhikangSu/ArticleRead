@@ -46,6 +46,18 @@
         "inLanguage": "zh-CN"
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "DeepRead 完整使用教程",
+        "description": "从首次启动引导开始，依次演示论文主题整理、PDF 阅读、原文问答与图表框选。",
+        "thumbnailUrl": "https://zhikangsu.github.io/DeepRead/assets/deepread-guide-poster.jpg",
+        "uploadDate": "2026-08-04",
+        "duration": "PT1M55S",
+        "contentUrl": "https://zhikangsu.github.io/DeepRead/assets/deepread-guide.mp4"
+      }
+    </script>
     <script src="./app.js" defer></script>
   </head>
   <body>
@@ -60,6 +72,7 @@
         <nav class="site-nav" aria-label="主要导航">
           <a href="#features">功能</a>
           <a href="#workflow">使用方式</a>
+          <a href="#tutorial">视频教程</a>
           <a href="#privacy">数据与 AI</a>
           <a href="#faq">常见问题</a>
         </nav>
@@ -319,6 +332,56 @@
               </div>
             </li>
           </ol>
+        </div>
+      </section>
+
+      <section class="tutorial-section" id="tutorial" aria-labelledby="tutorial-title">
+        <div class="page-shell">
+          <div class="tutorial-intro">
+            <div class="section-heading reveal">
+              <span class="section-kicker section-kicker-light">完整演示 · 1 分 55 秒</span>
+              <h2 id="tutorial-title">从第一次打开，到真正开始精读。</h2>
+              <p>
+                保留完整操作顺序，从首次引导开始，逐步演示主题整理、论文阅读、原文问答与图表框选。
+              </p>
+            </div>
+            <ul class="tutorial-topics" aria-label="视频内容">
+              <li><span>01</span>首次设置</li>
+              <li><span>02</span>主题整理</li>
+              <li><span>03</span>原文问答</li>
+              <li><span>04</span>图表框选</li>
+            </ul>
+          </div>
+
+          <figure class="tutorial-player reveal">
+            <div class="tutorial-window-bar" aria-hidden="true">
+              <div><span></span><span></span><span></span></div>
+              <small>DeepRead · 完整使用教程</small>
+              <strong>1:55</strong>
+            </div>
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              poster="./assets/deepread-guide-poster.jpg"
+              aria-label="播放 DeepRead 完整使用教程"
+            >
+              <source
+                src="./assets/deepread-guide.mp4"
+                type="video/mp4"
+              />
+              你的浏览器暂不支持视频播放。请
+              <a href="./assets/deepread-guide.mp4">直接打开视频</a>。
+            </video>
+            <figcaption>
+              <span>完整视频保留原画质与原始讲解顺序，页面不会预先下载完整视频。</span>
+              <a
+                href="./assets/deepread-guide.mp4"
+                target="_blank"
+                rel="noreferrer"
+              >单独打开视频 <span>↗</span></a>
+            </figcaption>
+          </figure>
         </div>
       </section>
 

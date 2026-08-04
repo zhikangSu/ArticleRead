@@ -33,6 +33,11 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Add tutorial video
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release download v0.1.21 --pattern deepread-guide.mp4 --dir assets
+
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
