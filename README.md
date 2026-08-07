@@ -29,10 +29,12 @@ DeepRead 是一款面向论文精读的桌面应用。核心在于：你向 AI �
 
 ### 1. 使用前准备
 
-AI 问答会调用你本机已经安装并登录的命令行工具。使用前请至少准备其中一种：
+AI 问答会调用你本机已经安装并登录的工具。使用前请至少准备其中一种：
 
-- Claude Code：确认终端中可以运行 `claude`
-- Codex CLI：确认终端中可以运行 `codex`
+- Claude Code：安装并完成登录，可在终端中用 `claude --version` 检查。
+- Codex：Windows 用户可以安装并登录 Codex 桌面 App，或单独安装并登录 Codex CLI。DeepRead 会自动发现 Codex App 随附的 `codex.exe`，因此只安装 Codex App 时，即使 CMD/PowerShell 中无法直接运行 `codex`，DeepRead 仍可能正常使用；请以 DeepRead 设置页显示的引擎状态为准。
+
+DeepRead 不内置 Claude Code、Codex 账号或订阅，使用的是你自己的本机安装和登录状态。新安装或重新登录工具后，请重启 DeepRead。
 
 ### 2. 下载应用
 
@@ -40,10 +42,30 @@ AI 问答会调用你本机已经安装并登录的命令行工具。使用前�
 
 | 系统 | 架构 | 推荐安装包 |
 | --- | --- | --- |
+| Windows | x64（已在 Windows 11 验证） | `DeepRead-0.1.21-windows-x64.exe` |
 | macOS | Apple Silicon / arm64 | `DeepRead-0.1.21-arm64.dmg` |
 | Linux | x64 / amd64 | `articleread-linux-desktop_0.1.21_amd64.deb` |
 
+Windows 同时提供 `DeepRead-0.1.21-windows-x64.zip` 免安装压缩包。一般用户推荐使用 `.exe` 安装器；ZIP 必须完整解压后再运行，其中的用户数据仍保存在系统用户目录，并不属于“数据随程序移动”的便携模式。
+
 ### 3. 安装
+
+#### Windows
+
+1. 下载 `DeepRead-0.1.21-windows-x64.exe`，并对照 Release 页面显示的 SHA256 校验值。
+2. 当前 Windows 安装包尚未进行代码签名，因此浏览器或 Microsoft Defender SmartScreen 可能提示该文件不常下载或发布者未知。请确认文件来自本仓库的官方 Release 页面：
+   - 浏览器拦截下载时，选择“保留”或“仍然保留”。
+   - 运行安装器出现“Windows 已保护你的电脑”时，点击“更多信息”，再选择“仍要运行”。
+   - 无需关闭 Defender 或降低系统安全设置。
+3. 按安装向导选择安装位置并完成安装。该安装器默认按当前用户安装。
+
+DeepRead 会自动检查常见的 npm、pnpm、WindowsApps 以及 Codex App 安装目录，并直接启动找到的 Claude/Codex 程序，不依赖 CMD 或 PowerShell 拼接用户问题。若设置页未识别到引擎，请先确认相应工具已登录，再重启 DeepRead。
+
+Windows 标准安装包已内置用于译文 PDF 生成的 TinyTeX、ctex 和 Fandol，无需另行安装 TeX。译文 PDF 仍要求论文具有可用的 LaTeX 源码；使用自定义字体、私有或非常规宏包的论文可能无法编译，但不会影响论文导入、阅读、标注和 AI 问答。
+
+为兼容旧版 ArticleRead，应用配置、默认论文数据及运行缓存继续使用 `%APPDATA%\ArticleRead`。如果首次启动时选择了其他数据目录，论文和标注会保存在所选位置，目录指针仍记录在 `%APPDATA%\ArticleRead`。覆盖安装或升级会继续使用原有数据。
+
+从“设置 → 应用 → 已安装的应用”卸载 DeepRead 不会删除 `%APPDATA%\ArticleRead` 或你另行选择的数据目录。需要彻底清除数据时，请先备份，再手动删除相应目录。
 
 #### macOS
 
@@ -83,6 +105,6 @@ chmod +x DeepRead-0.1.21.AppImage
 
 ### 5. 应用更新
 
-从 0.1.13 起，DeepRead 支持应用内内核更新。兼容当前桌面壳的功能更新可在设置页一键下载，重启应用后生效；更新失败时会自动回退。
+macOS 与 Linux 从 0.1.13 起支持兼容内核的应用内更新。Windows 0.1.21 当前只使用安装包内置的 Windows 内核，暂不接受应用内内核热更新；Windows 用户升级时请下载新的完整 `.exe` 安装包并覆盖安装，原有 ArticleRead 数据目录会继续保留。
 
 如遇到安装、阅读、问答或 Notion 集成问题，欢迎通过 [GitHub Issues](https://github.com/zhikangSu/DeepRead/issues) 反馈。
