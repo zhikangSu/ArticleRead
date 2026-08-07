@@ -36,23 +36,25 @@ AI 问答会调用你本机已经安装并登录的工具。使用前请至少�
 
 DeepRead 不内置 Claude Code、Codex 账号或订阅，使用的是你自己的本机安装和登录状态。新安装或重新登录工具后，请重启 DeepRead。
 
+Claude Code 使用第三方 API 或兼容服务时，仍需安装真实的 Claude Code CLI；API 配置成功并不等于 CLI 已安装。Windows 用户可在 CMD 中运行 `where.exe claude` 和 `claude --version` 排查。Windows 0.1.22 已修复新版 npm 安装方式中 `claude.cmd` 指向包内原生 `claude.exe` 时无法识别的问题。
+
 ### 2. 下载应用
 
-最新版本为 **0.1.21**，请前往 [v0.1.21 Releases 页面](https://github.com/zhikangSu/DeepRead/releases/tag/v0.1.21) 下载与你的系统对应的安装包。
+Windows 最新版本为 **0.1.22**，请前往 [v0.1.22 Releases 页面](https://github.com/zhikangSu/DeepRead/releases/tag/v0.1.22) 下载。macOS 与 Linux 当前仍使用 [v0.1.21](https://github.com/zhikangSu/DeepRead/releases/tag/v0.1.21)。
 
 | 系统 | 架构 | 推荐安装包 |
 | --- | --- | --- |
-| Windows | x64（已在 Windows 11 验证） | `DeepRead-0.1.21-windows-x64.exe` |
+| Windows | x64（已在 Windows 11 验证） | `DeepRead-0.1.22-windows-x64.exe` |
 | macOS | Apple Silicon / arm64 | `DeepRead-0.1.21-arm64.dmg` |
 | Linux | x64 / amd64 | `articleread-linux-desktop_0.1.21_amd64.deb` |
 
-Windows 同时提供 `DeepRead-0.1.21-windows-x64.zip` 免安装压缩包。一般用户推荐使用 `.exe` 安装器；ZIP 必须完整解压后再运行，其中的用户数据仍保存在系统用户目录，并不属于“数据随程序移动”的便携模式。
+Windows 同时提供 `DeepRead-0.1.22-windows-x64.zip` 免安装压缩包。一般用户推荐使用 `.exe` 安装器；ZIP 必须完整解压后再运行，其中的用户数据仍保存在系统用户目录，并不属于“数据随程序移动”的便携模式。
 
 ### 3. 安装
 
 #### Windows
 
-1. 下载 `DeepRead-0.1.21-windows-x64.exe`，并对照 Release 页面显示的 SHA256 校验值。
+1. 下载 `DeepRead-0.1.22-windows-x64.exe`，并对照 Release 页面显示的 SHA256 校验值。
 2. 当前 Windows 安装包尚未进行代码签名，因此浏览器或 Microsoft Defender SmartScreen 可能提示该文件不常下载或发布者未知。请确认文件来自本仓库的官方 Release 页面：
    - 浏览器拦截下载时，选择“保留”或“仍然保留”。
    - 运行安装器出现“Windows 已保护你的电脑”时，点击“更多信息”，再选择“仍要运行”。
@@ -105,6 +107,6 @@ chmod +x DeepRead-0.1.21.AppImage
 
 ### 5. 应用更新
 
-macOS 与 Linux 从 0.1.13 起支持兼容内核的应用内更新。Windows 0.1.21 当前只使用安装包内置的 Windows 内核，暂不接受应用内内核热更新；Windows 用户升级时请下载新的完整 `.exe` 安装包并覆盖安装，原有 ArticleRead 数据目录会继续保留。
+macOS 与 Linux 从 0.1.13 起支持兼容内核的应用内更新。Windows 0.1.22 当前只使用安装包内置的 Windows 内核，暂不接受应用内内核热更新；Windows 用户升级时请下载新的完整 `.exe` 安装包并覆盖安装，原有 ArticleRead 数据目录会继续保留。
 
 如遇到安装、阅读、问答或 Notion 集成问题，欢迎通过 [GitHub Issues](https://github.com/zhikangSu/DeepRead/issues) 反馈。
